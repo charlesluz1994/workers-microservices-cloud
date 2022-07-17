@@ -16,7 +16,7 @@ import java.util.UUID;
 public class WorkerResource {
 
     @Autowired
-    private WorkerRepository repository; //Injetando dependencia do worker repository, objeto que acessa o BD.
+    private WorkerRepository repository;
 
     @GetMapping
     public ResponseEntity<List<Worker>> findAll(){
