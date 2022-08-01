@@ -1,0 +1,17 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: hr-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: worker
+        uri: lb://hr-worker
+        predicates:
+        - Path=/workers/**
+      - id: payroll
+        uri: lb://hr-payroll
+        predicates:
+        - Path=/payments/**
