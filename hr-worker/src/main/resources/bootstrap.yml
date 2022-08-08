@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: hr-worker
+  cloud:
+    config:
+      auto-refresh: true
+      server:
+        git:
+          uri: http://localhost:8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

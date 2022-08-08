@@ -1,3 +1,6 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: hr-config-server
@@ -5,8 +8,6 @@ spring:
     config:
       server:
         git:
-          default-label: main
-          uri: https://github.com/charlesluz1994/ms-worker-cloud-configs
-
-server:
-  port: 8888
+          uri: https://github.com/charlesluz1994/ms-worker-cloud-configs.git
+          username: charlesluz1994
+          password: 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
