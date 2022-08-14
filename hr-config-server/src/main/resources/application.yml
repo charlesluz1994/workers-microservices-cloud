@@ -8,6 +8,5 @@ spring:
     config:
       server:
         git:
+          default-label: main
           uri: https://github.com/charlesluz1994/ms-worker-cloud-configs.git
-          username: charlesluz1994
-          password: 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
