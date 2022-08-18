@@ -15,3 +15,7 @@ spring:
         uri: lb://hr-payroll
         predicates:
         - Path=/payments/**
+      - id: user
+        uri: lb://hr-user
+        predicates:
+          - Path=/users/**

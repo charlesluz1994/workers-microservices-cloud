@@ -2,22 +2,18 @@ package com.cluz.hruser.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "tb_role")
 public class Role implements Serializable {
-    private static final long serialVersionUID =    1l;
+    private static final long serialVersionUID = 1l;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String roleName;
 
-
-
-    public Role(){
+    public Role() {
     }
 
     public Role(Long id, String roleName) {
