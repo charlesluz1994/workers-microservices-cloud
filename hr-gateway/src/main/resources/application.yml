@@ -7,19 +7,21 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: worker
-        uri: lb://hr-worker
-        predicates:
-        - Path=/workers/**
-      - id: payroll
-        uri: lb://hr-payroll
-        predicates:
-        - Path=/payments/**
-      - id: user
-        uri: lb://hr-user
-        predicates:
-        - Path=/users/**
-      - id: oauth
-        uri: lb://hr-oauth
-        predicates:
-        - Path=/oauth/**
+        - id: worker
+          uri: lb://hr-worker
+          predicates:
+            - Path=/workers/**
+        - id: payroll
+          uri: lb://hr-payroll
+          predicates:
+            - Path=/payments/**
+        - id: user
+          uri: lb://hr-user
+          predicates:
+            - Path=/users/**
+        - id: oauth
+          uri: lb://hr-oauth
+          predicates:
+            - Path=/oauth/**
+      service:
+        sensitiveHeaders: Cookie,Set-Cookie
