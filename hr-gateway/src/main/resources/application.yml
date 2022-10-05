@@ -15,13 +15,13 @@ spring:
           uri: lb://hr-payroll
           predicates:
             - Path=/payments/**
-        - id: user
-          uri: lb://hr-user
-          predicates:
-            - Path=/users/**
-        - id: oauth
-          uri: lb://hr-oauth
-          predicates:
-            - Path=/oauth/**
+#        - id: user
+#          uri: lb://hr-user
+#          predicates:
+#            - Path=/users/**
+#        - id: oauth
+#          uri: lb://hr-oauth
+#          predicates:
+#            - Path=/oauth/**
       service:
         sensitiveHeaders: Cookie,Set-Cookie
